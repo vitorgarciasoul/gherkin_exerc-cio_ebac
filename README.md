@@ -1,2 +1,2 @@
-# gherkin_exerc-cio_ebac
+# gherkin_exercício_ebac
 Exercícios da Ebac do curso Qualidade de Software - converter critérios de aceitação em Gherkin
