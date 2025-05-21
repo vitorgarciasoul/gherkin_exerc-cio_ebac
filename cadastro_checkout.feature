@@ -1,29 +1,30 @@
-Feature: Cadastro na tela de checkout
+#laguage: pt
+Funcionalidade: Cadastro na tela de checkout
 
     Como cliente da EBAC-SHOP
     Quero concluir meu cadastro
     Para finalizar minha compra
 
-    Background:
-        Given que estou na tela de cadastro da finalização da compra
+   Contexto:
+        Dado que estou na tela de cadastro da finalização da compra
 
-    Scenario: Cadastro com campos obrigatórios preenchidos
-        When preencho todos os campos obrigatórios
-        And clico em "Finalizar Cadastro"
-        Then o cadastro deve ser concluído com sucesso
+    Cenário: Cadastro com campos obrigatórios preenchidos
+        Quando preencho todos os campos obrigatórios
+        E clico em "Finalizar Cadastro"
+        Então o cadastro deve ser concluído com sucesso
 
-    Scenario Outline: Cadastro com e-mail inválido
-        When insiro o <email>
-        And clico em "Finalizar Cadastro"
-        Then deve exibir a mensagem de erro "Formato de e-mail inválido"
+    Esquema do Cenário: Cadastro com e-mail inválido
+        Quando insiro o <email>
+        E clico em "Finalizar Cadastro"
+        Então deve exibir a mensagem de erro "Formato de e-mail inválido"
 
-    Example:
+    Examplos:
             | email      |
             | teste@com  |
             | teste.com  |
             | @teste.com |
 
-    Scenario: Campos obrigatórios vazios
-        When deixo os campos obrigatórios em branco
-        And clico em "Finalizar Cadastro"
-        Then deve existir mensagem de alerta solicitando o preencimento dos campos
+    Cenário: Campos obrigatórios vazios
+        Quando deixo os campos obrigatórios em branco
+        E clico em "Finalizar Cadastro"
+        Então deve existir mensagem de alerta solicitando o preencimento dos campos
