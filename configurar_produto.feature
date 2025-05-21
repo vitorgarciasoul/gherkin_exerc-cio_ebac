@@ -16,7 +16,7 @@ Funcionalidade: Configuração de produto
         Quando seleciono 11 unidades de um produto
         Então o sistema deve impedir a seleção e xibir uma mensagem de limite de 10 unidades
 
-    Cenário Botão "Limpar" redefine a configuração
+    Cenário: Botão "Limpar" redefine a configuração
         Dado que selecionei cor, tamanho e quantidade
         Quando clico no botão "limpar"
         Então os campos devem voltar ao estado original não selecionado
